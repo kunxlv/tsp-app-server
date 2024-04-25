@@ -49,10 +49,10 @@ jobs:
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Tag Docker image
-      run: docker tag tsp-app-server ${{ secrets.DOCKER_USERNAME }}/kunxlv:latest
+      run: docker tag tsp-app-server ${{ secrets.DOCKER_USERNAME }}/tsp-app-server:latest
 
     - name: Push Docker image to Docker Hub
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/kunxlv:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/tsp-app-server:latest
 
 
 
